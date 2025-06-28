@@ -27,6 +27,20 @@
         font-style: normal;
     }
 
+    @font-face {
+        font-family: 'secondademi';
+        src: url(fonts/SecondaSoftDemiIt.otf) format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'seconda';
+        src: url(fonts/SecondaSoftRegular.otf) format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
 
 /* GENERAL */
 
@@ -176,6 +190,7 @@
 
     #main-site {
         display: none;
+        background: radial-gradient(circle at center 60%, #fff 10%, #ed77c1  100%);
     }
 
 
@@ -233,9 +248,10 @@
 /* HOME PAGE */
 
     #homepage {
-        background: radial-gradient(circle at center 60%, #fff 10%, #ed77c1  100%);
         min-height: 100vh;
         margin: 0;
+
+        background-color: #fffacf;
     }
 
     #homegrid {
@@ -303,6 +319,168 @@
                 transform: scale(1.1);
                 filter: drop-shadow(0 0 10px #dea9ff);
             }
+
+
+
+/* PORTFOLIO */
+
+    #portpage {
+        background-color: #e8c3ff;
+                background-image: url(images/siteassets/whitedots.png);
+
+    }
+
+    .portfolio {
+        display: flex;
+        background-color: #faf7da;
+        min-height: 100vh;
+    }
+
+    .portfolio-header {
+        background-color: #fff7ad;
+        padding: 20px;
+        width: 300px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 10px;
+
+        position: sticky;
+
+        border-right: #e0d460 8px solid;
+
+    }
+
+    .portfolio-header h1 {
+        font-family: 'marykate';
+        font-size: 90px;
+
+        color: #ff6ca9;
+
+        padding: 10px;
+    }
+
+    /* filters */
+
+        .filter-buttons button {
+            background-color: #cadf8f;
+            padding: 10px 25px;
+            border-radius: 30px;
+
+            font-family: 'marykate';
+            font-size: 25px;
+
+            border: none;
+
+            color: #ff6ca9;
+
+            transition: all 0.3s ease;
+
+            box-shadow: 0 4px 0 #85935c;
+
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .filter-buttons button:hover {
+            background-color: #ff90be;
+            box-shadow: 0 4px 0 #ff6ca9;
+
+            color: #85935c;
+        }
+
+
+    .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        padding: 30px;
+        flex: 1; 
+    }
+
+        .portfolio-item {
+            background-color: #fff;
+            padding: 10px;
+
+            box-shadow: 0px 10px 3px rgba(198, 160, 184, 0.5);
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            height: 320px;
+            width: 220px;
+
+            overflow: hidden;
+
+            margin-bottom: 20px;
+
+            border: #f6aaca 3px solid;
+
+            border-radius: 20px;
+        }
+
+        .portfolio-item img {
+            width: 220px;
+            height: 220px;
+
+            object-fit: cover;
+
+            align-self: center;
+            justify-self: center;
+
+        }
+
+        .portfolio-item p {
+            text-align: center;
+            margin-top: 10px;
+
+            font-weight: bold;
+            color: #727171;
+
+            font-family: 'seconda';
+        }
+
+        .port-button {
+            font-family: 'seconda';
+            text-decoration: none;
+
+            background-color: #ff6ca9;
+            padding: 10px;
+            border-radius: 30px;
+
+            color: #fff;
+
+            transition: all 0.3s ease;
+
+            display: inline-block;
+        }
+
+        
+        .port-button:hover {
+            background-color: #cadf8f;
+            color: #ff6ca9;
+            border-radius: 30px;
+
+            transform: translateY(-4px);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
 /* FOOTER */
 
     #site-footer {

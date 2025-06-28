@@ -52,6 +52,15 @@ window.addEventListener('DOMContentLoaded', () => {
   const smallwink = createsoundbite("audio/smallwink.mp3");
   const twinkle = createsoundbite("audio/twinkle.mp3");
 
+    
+mouseoversound.volume = 0.1;
+clicksound.volume = 0.1;
+cuteshine.volume = 0.1;
+magicshine.volume = 0.1;
+notif.volume = 0.1;
+smallwink.volume = 0.1;
+twinkle.volume = 0.1;
+
   if (hasVisited) {
     splash.style.display = 'none';
     mainSite.style.display = 'block';
@@ -114,7 +123,7 @@ const playlist = [
   const toggleBtn = document.getElementById('music-toggle');
 
   // Set default volume lower (0.2 = 20%)
-  music.volume = 0.2;
+  music.volume = 0.1;
 
   // Load and play the current track
   function playTrack(index) {
@@ -168,3 +177,7 @@ document.querySelectorAll('.hover-gif').forEach(img => {
       img.src = stillSrc;
     });
   });
+
+
+
+
