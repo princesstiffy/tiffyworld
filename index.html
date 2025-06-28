@@ -15,7 +15,7 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
-<body>
+<body id="homepage">
 
     <!-- SPLASH/WELCOME SCREEN -->
 
@@ -30,14 +30,14 @@
 
 <div id="main-site">
 
-    <header>
+    <header id="homeheader">
 
         <nav class="nav-wrapper">
             <!-- top row logo & hamburger -->
         <div class="nav-header">
                 <!-- logo -->
                 <a href="index.html" class="logo">
-                    <img src="images/logo" alt="logo">
+                    <img src="images/siteassets/logo.png" alt="logo">
                 </a>
 
                 <!-- hamburger -->
@@ -48,13 +48,62 @@
 
             <ul class="main_nav" id="myTopnav">
                 <li><a href="about.html">about</a></li>
-                <li><a href="portfolio.html">portfolio</a></li>
+                <li><a href="portfolio.html" class="nav-link">portfolio</a></li>
                 <li><a href="games.html">games</a></li>
                 <li><a href="contact.html">contact</a></li>
             </ul>
         </nav>
 
     </header>
+
+    <main>
+
+        <div id="homegrid">
+            <div id="earth">
+                <img src="images/siteassets/earthgif.gif" alt="earth">
+            </div>
+
+            <!-- links -->
+             <div id="earthlinks">
+                <a href="about.html" id="sleepover">
+                    <img src="images/siteassets/sleepover.png" alt="sleepover with tiffy!" class="hover-gif pop-glow sound-link" data-still="images/siteassets/sleepover.png" data-anim="images/siteassets/sleepovergif.gif">
+                </a>
+
+                <a href="games.html" id="dressup" >
+                    <img src="images/siteassets/dressup.png" alt="dress up games" class="hover-gif pop-glow sound-link" data-still="images/siteassets/dressup.png" data-anim="images/siteassets/dressupgif.gif">
+                </a>
+
+                <a href="portfolio.html" id="portfolio" >
+                    <img src="images/siteassets/projects.png" alt="projects/portfolio" class="hover-gif pop-glow sound-link" data-still="images/siteassets/projects.png" data-anim="images/siteassets/portfoliogif.gif">
+                </a>
+
+                <a href="contact.html" id="contact" >
+                    <img src="images/siteassets/email.png" alt="email box" class="hover-gif pop-glow sound-link" data-still="images/siteassets/email.png" data-anim="images/siteassets/contactgif.gif">
+                </a>
+            </div>
+        </div>
+
+<!-- music player -->
+        <audio id="bg-music" preload="auto"></audio>
+        <button id="music-toggle" aria-label="Toggle music">
+        <i class="fa fa-music"></i>
+        </button>
+
+
+    </main>
+
+<footer id="site-footer">
+    <div class="footer-inner">
+        <p>© 2025 Tiffy's World - Tiffany Rubio</p></p>
+    </div>
+
+    <div class="footer-links">
+      <a href="mailto:tiffanyrubio78@gmail.com">Email Me</a>
+      <a href="https://instagram.com/girlytiffy" target="_blank">Instagram</a>
+      <a href="https://yourblog.com" target="_blank">Blog</a>
+    </div>
+</footer>
+
 
 
 
