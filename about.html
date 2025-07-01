@@ -19,6 +19,8 @@
 
 <body id="aboutpage">
 
+
+
     <header id="aboutheader">
 
         <nav class="nav-wrapper">
@@ -44,6 +46,69 @@
         </nav>
 
     </header>
+
+
+    <div class="sidebar-wrapper">
+        <img src="images/siteassets/sidebar.png" id="sidebar-img" onclick="toggleSidebar()" />
+
+        <div class="hotspot-buttons" id="hotspots">
+            <button class="hotspot" id="btn-tiffy" onclick="openModal('tiffy')"></button>
+            <button class="hotspot" id="btn-style"></button>
+            <button class="hotspot" id="btn-inspo"></button>
+            <button class="hotspot" id="btn-skills"></button>
+        </div>
+    </div>
+
+
+
+    <main id="aboutme">
+
+        <div class="container">
+        <video autoplay muted loop class="bg-video">
+            <source src="videos/aboutmebg.mp4" type="video/mp4"/>
+        </video>
+
+
+
+<div class="modal" id="modal-tiffy">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2>Meet Tiffy</h2>
+    <p>Your cute intro text here 💕</p>
+  </div>
+</div>
+
+<div class="overlay" id="overlay"></div>
+
+
+
+
+        <!-- music player -->
+        <audio id="bg-music" preload="auto"></audio>
+        <button id="music-toggle" aria-label="Toggle music">
+        <i class="fa fa-music"></i>
+        </button>
+
+    </main>
+
+
+
+
     
+
+<footer id="site-footer">
+    <div class="footer-inner">
+        <p>© 2025 Tiffy's World - Tiffany Rubio</p></p>
+    </div>
+
+    <div class="footer-links">
+      <a href="mailto:tiffanyrubio78@gmail.com">Email Me</a>
+      <a href="https://instagram.com/girlytiffy" target="_blank">Instagram</a>
+      <a href="https://yourblog.com" target="_blank">Blog</a>
+    </div>
+</footer>
+
+<script src="script.js"></script> 
+
 </body>
 </html>

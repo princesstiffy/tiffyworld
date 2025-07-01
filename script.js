@@ -181,3 +181,24 @@ document.querySelectorAll('.hover-gif').forEach(img => {
 
 
 
+// ABOUT ME MODAL
+
+function toggleSidebar() {
+  const sidebar = document.querySelector('.sidebar-wrapper');
+  sidebar.classList.toggle('open');
+
+  sidebar.style.display = isOpen ? 'none' : 'block';
+}
+
+function openModal(id) {
+  document.getElementById(`modal-${id}`).style.display = 'flex';
+  document.getElementById('overlay').style.display = 'block';
+}
+
+function closeModal() {
+  document.querySelectorAll('.modal').forEach(modal => modal.style.display = 'none');
+  document.getElementById('overlay').style.display = 'none';
+}
+
+
+

@@ -186,6 +186,15 @@
 
             top: 100px;
 
+            transition: all 0.3s ease;
+
+            box-shadow: -10px 10px 10px #d15689;
+        }
+
+        #enter-btn:hover {
+            transform: translateY(-6px);
+
+            background-color: #fffacf;
         }
 
     #main-site {
@@ -471,6 +480,168 @@
         }
 
 
+/* ABOUT PAGE */
+
+#aboutpage {
+    background-color: #af78d2;
+    overflow: hidden;
+}
+
+#aboutme {
+    position: relative;
+}
+
+.bg-video {
+    position: relative;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  object-fit: cover;
+  z-index: -2;
+}
+
+
+    /* sidebar */
+        .sidebar-wrapper {
+            position: absolute;
+            top: 120px;
+
+            right: 110px;
+
+            overflow: hidden;
+
+
+            z-index: 5;
+            height: 100vh;
+            width: 270px;
+
+            transition: all 0.4s ease;
+        }
+            .sidebar-wrapper.open {
+                width: 815px;
+                right: 60px;
+            }
+
+        #sidebar-img {
+            width: 815px;
+            height: auto;
+            display: block;
+        }
+
+        .hotspot-buttons {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 815px;
+            height: 100%;
+
+            pointer-events: none;
+        }
+
+            .hotspot {
+                position: absolute;
+                pointer-events: auto;
+
+                background: transparent;background-size: contain;
+                background-color: transparent;
+                background-repeat: no-repeat;
+
+                border: none;
+                cursor: pointer;
+
+                opacity: 1;
+                z-index: 10;
+
+                transition: opacity 0.2s ease;
+            }
+
+            .sidebar-wrapper:not(.open) .hotspot {
+                pointer-events: none;
+                opacity: 0;
+            }
+
+            .sidebar-wrapper.open .hotspot {
+                opacity: 1;
+                pointer-events: auto;
+            }
+
+
+            /* buttons */
+            #btn-tiffy {
+                background-image: url(images/siteassets/meettiffy.png);
+                width: 250px;
+                height: 250px;
+                top: 60px;
+                left: 200px;
+            }
+
+            #btn-style {
+                background-image: url(images/siteassets/mystyle.png);
+                width: 250px;
+                height: 250px;
+
+                top: 160px;
+                left: 450px;
+            }
+
+            #btn-inspo {
+                background-image: url(images/siteassets/myinspo.png);
+
+                width: 250px;
+                height: 250px;
+
+                top: 430px;
+                left: 450px;
+            }
+
+            #btn-skills {
+                background-image: url(images/siteassets/myskills.png);
+
+                width: 250px;
+                height: 250px;
+
+                top: 530px;
+                left: 200px;
+            }
+
+
+.overlay {
+  position: absolute;
+  top: 5px; left: 0;
+  width: 1440px; height: 810px;
+  background: rgba(255, 175, 230, 0.7);
+  z-index: 10;
+  display: none;
+}
+
+
+
+.modal {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 30;
+}
+
+.modal-content {
+  background: #a3d4ff;
+  padding: 20px;
+  border-radius: 20px;
+  width: 60%;
+  max-width: 600px;
+  box-shadow: 0 0 20px #0004;
+  text-align: center;
+}
+
+.modal .close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 2rem;
+  cursor: pointer;
+}
 
 
 
