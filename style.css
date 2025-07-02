@@ -260,7 +260,9 @@
         min-height: 100vh;
         margin: 0;
 
-        background-color: #fffacf;
+        background-color: #f1e7b4;
+                background-image: url(images/siteassets/whitedots.png);
+
     }
 
     #homegrid {
@@ -326,7 +328,7 @@
 
             .pop-glow:hover {
                 transform: scale(1.1);
-                filter: drop-shadow(0 0 10px #dea9ff);
+                filter: drop-shadow(0 0 10px #fff);
             }
 
 
@@ -335,7 +337,7 @@
 
     #portpage {
         background-color: #e8c3ff;
-                background-image: url(images/siteassets/whitedots.png);
+        background-image: url(images/siteassets/whitedots.png);
 
     }
 
@@ -483,7 +485,9 @@
 /* ABOUT PAGE */
 
 #aboutpage {
-    background-color: #af78d2;
+    background-color: #ffda9e;
+    background-image: url(images/siteassets/whitedots.png);
+
     overflow: hidden;
 }
 
@@ -551,7 +555,7 @@
                 opacity: 1;
                 z-index: 10;
 
-                transition: opacity 0.2s ease;
+                transition: all 0.2s ease;
             }
 
             .sidebar-wrapper:not(.open) .hotspot {
@@ -604,25 +608,46 @@
             }
 
 
-.overlay {
-  position: absolute;
-  top: 5px; left: 0;
-  width: 1440px; height: 810px;
-  background: rgba(255, 175, 230, 0.7);
-  z-index: 10;
-  display: none;
+.modal, .overlay {
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.modal.show, .overlay.show {
+    opacity: 1;
+    visibility: visible;
 }
 
 
 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 175, 230, 0.7);
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
 .modal {
   position: absolute;
-  top: 0; left: 0;
-  width: 100vw; height: 100vh;
-  display: none;
+  top: 0;
+  left: -100px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
   align-items: center;
   justify-content: center;
   z-index: 30;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
 .modal-content {
@@ -631,20 +656,94 @@
   border-radius: 20px;
   width: 60%;
   max-width: 600px;
-  box-shadow: 0 0 20px #0004;
+  box-shadow: 0 0 20px #da518a;
   text-align: center;
+
+  border: 10px solid #83bbde;
+
+  position: relative;
+
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.4s ease;
 }
+
+    .modal.show .modal-content {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .modal-content h2{
+        font-size: 60px;
+        color: #fff;
+
+        font-weight: bolder;
+
+        font-family: 'marykate';
+
+        -webkit-text-stroke: #ff90be 0.6px;
+    }
+
+    .modal-content p {
+        font-size: 20px;
+        line-height: 2;
+        color:#1b4a67;
+
+        font-family:'seconda';
+
+    }
 
 .modal .close {
-  position: absolute;
-  top: 20px;
-  right: 40px;
-  font-size: 2rem;
-  cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+
+    font-size: 28px;
+    font-weight: bolder;
+    color: #29404e;
+
+    cursor: pointer;
+    z-index: 35;
+
+    transition: all 0.3s ease;
 }
 
+    .modal .close:hover {
+        transform: translateY(-4px);
+        color: #fff;
+    }
 
 
+
+/* GAMES PAGE  */
+    #gamespage {
+        background-color: #f6aaca;
+        background-image: url(images/siteassets/whitedots.png);
+    }
+
+    #games {
+        height: 600px;
+        background-color: #cadf8f;
+
+    }
+
+    #games h1 {
+        font-family: 'marykate';
+        font-size: 150px;
+        font-weight: bolder;
+
+        align-self: center;
+        justify-self: center;
+
+        color: #f6aaca;
+        -webkit-text-stroke: #f1e7b4 1px;
+
+        padding-top: 100px;
+        margin-top: 0;
+    }
+
+
+/* CONTACT PAGE */
 
 
 

@@ -58,7 +58,7 @@ clicksound.volume = 0.1;
 cuteshine.volume = 0.1;
 magicshine.volume = 0.1;
 notif.volume = 0.1;
-smallwink.volume = 0.1;
+smallwink.volume = 0.15;
 twinkle.volume = 0.1;
 
   if (hasVisited) {
@@ -102,6 +102,16 @@ document.querySelectorAll('.AA').forEach(link => {
     smallwink.playclip();
   });
 });
+
+document.querySelectorAll('.smallwink').forEach(link => {
+  link.addEventListener('mouseenter', () => {
+    smallwink.playclip();
+  });
+});
+
+
+
+
 });
 
 
@@ -191,13 +201,47 @@ function toggleSidebar() {
 }
 
 function openModal(id) {
-  document.getElementById(`modal-${id}`).style.display = 'flex';
-  document.getElementById('overlay').style.display = 'block';
+  document.getElementById(`modal-${id}`).classList.add('show');
+  document.getElementById('overlay').classList.add('show');
 }
 
 function closeModal() {
-  document.querySelectorAll('.modal').forEach(modal => modal.style.display = 'none');
-  document.getElementById('overlay').style.display = 'none';
+  document.querySelectorAll('.modal').forEach(modal => modal.classList.remove('show'));
+  document.getElementById('overlay').classList.remove('show');
+}
+
+
+
+
+// INDEX FORM POPUP 
+
+function showPopup(event) {
+  event.preventDefault(); // Stop the form from instantly submitting
+
+  // Send form data to Formspree
+  let form = event.target;
+  let formData = new FormData(form);
+
+  fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: {
+          'Accept': 'application/json'
+      }
+  }).then(response => {
+      if (response.ok) {
+          document.getElementById("popup-message").classList.remove("hidden");
+          form.reset(); // Clear the form after submission
+      } else {
+          alert("Oops! Something went wrong. 😢");
+      }
+  }).catch(error => {
+      alert("There was an error submitting the form.");
+  });
+}
+
+function closePopup() {
+  document.getElementById("popup-message").classList.add("hidden");
 }
 
 

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+
+    <!-- URL LOGO -->
+    <link rel="icon" href="images/siteassets/logo.png" type="image/x-icon">
+
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- HAMBURGER -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+
+<body id="contactpage">
+
+
+
+    <header id="contactheader">
+
+        <nav class="nav-wrapper">
+            <!-- top row logo & hamburger -->
+        <div class="nav-header">
+                <!-- logo -->
+                <a href="index.html" class="logo">
+                    <img src="images/siteassets/logo.png" alt="logo">
+                </a>
+
+                <!-- hamburger -->
+                <a href="javascript:void(0);" class="icon" onclick="toggleNav()">
+                    <i class="fa fa-bars"></i>
+                </a>
+        </div>
+
+            <ul class="main_nav" id="myTopnav">
+                <li><a href="about.html">about</a></li>
+                <li><a href="portfolio.html">portfolio</a></li>
+                <li><a href="games.html">games</a></li>
+                <li><a href="home.html">home</a></li>
+            </ul>
+        </nav>
+
+    </header>
+<main>
+
+        <div class="contact-container">
+        <header class="contact-header">
+          <h1>contact me!</h1>
+          <p>I'd love to hear from you! Fill out the form below or drop me a message.</p>
+        </header>
+    
+    
+        <form action="https://formspree.io/f/xjkyklda" method="POST" onsubmit="showPopup(event)" class="contact-form"> 
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" placeholder="your name" required>
+    
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" name="email" placeholder="your email" required>
+    
+          <label for="message">Your Message:</label>
+          <textarea id="message" name="message" placeholder="type here!" rows="6" required></textarea>
+    
+          <button type="submit">send message</button>
+        </form>
+    </div>
+
+    <!-- popup msg -->
+    <div id="popup-message" class="hidden">
+        <p>your message has been sent! 💌</p>
+        <button onclick="closePopup()">ok</button>
+    </div>
+
+ <!-- music player -->
+        <audio id="bg-music" preload="auto"></audio>
+        <button id="music-toggle" aria-label="Toggle music">
+        <i class="fa fa-music"></i>
+        </button>
+
+</main>
+
+
+
+
+    
+
+<footer id="site-footer">
+    <div class="footer-inner">
+        <p>© 2025 Tiffy's World - Tiffany Rubio</p></p>
+    </div>
+
+    <div class="footer-links">
+      <a href="mailto:tiffanyrubio78@gmail.com">Email Me</a>
+      <a href="https://instagram.com/girlytiffy" target="_blank">Instagram</a>
+      <a href="https://yourblog.com" target="_blank">Blog</a>
+    </div>
+</footer>
+
+<script src="script.js"></script>     
+</body>
+</html>
