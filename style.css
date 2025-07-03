@@ -744,9 +744,101 @@
 
 
 /* CONTACT PAGE */
+    #contactpage {
+        background-color: #ff6ca9;
+        background-image: url(images/siteassets/whitedots.png);
+    }
+
+    #contact {
+        background-color: #f1e7b4;
+    }
+
+    .contact-container{
+        margin-top: 0;
+        padding: 20px;
+        display: flex;
+    }
+
+        .contact-container h1 {
+            font-family: 'marykate';
+            text-align: center;
+            font-size: 80px;
+
+            color: #ff6ca9;
+        }
+
+    .contact-form {
+        background-color: #cadf8f;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #contact img {
+        width: 500px;
+    }
 
 
+/* popup msg */
 
+ #popup-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffe7ed;
+    padding: 20px;
+    border-radius: 20px;
+    border: #f6aaca 10px solid;
+    box-shadow: 5px 5px 10px rgba(198, 41, 117, 0.2);
+    text-align: center;
+    z-index: 1000;
+
+    font-family: 'marykate';
+    font-size: 30px;
+}
+
+#popup-message p {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 30px;
+    color: #ff6ca9;
+}
+
+/* Hide popup initially */
+.hidden {
+    display: none;
+}
+
+/* Button inside popup */
+#popup-message button {
+    background: #cadf8f;
+    border: #85935c 5px solid;
+
+    color: #ff6ca9;
+    padding: 10px 25px;
+    font-size: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+    font-family: "marykate", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    box-shadow: 4px 4px 4px rgba(130, 148, 78, 0.3);
+}
+
+#popup-message button:hover {
+    background: #a3d4ff;
+    border: #69a7cd 5px solid;
+
+    color: #da518a;
+    transform: translateY(-5px);
+    box-shadow: 4px 4px 4px rgba(51, 123, 168, 0.3);
+
+}
 
 
 
