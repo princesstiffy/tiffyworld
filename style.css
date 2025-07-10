@@ -485,7 +485,7 @@
 /* ABOUT PAGE */
 
 #aboutpage {
-    background-color: #ffda9e;
+    background-color: #dea9ff;
     background-image: url(images/siteassets/whitedots.png);
 
     overflow: hidden;
@@ -744,40 +744,118 @@
 
 
 /* CONTACT PAGE */
-    #contactpage {
-        background-color: #ff6ca9;
-        background-image: url(images/siteassets/whitedots.png);
-    }
+#contactpage {
+    background-color: #f6aaca;
+    background-image: url(images/siteassets/whitedots.png);
+}
 
-    #contact {
-        background-color: #f1e7b4;
-    }
+#contactmain {
+    background-color: #f1e7b4;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-areas: 
+        "info img";
+    gap: 30px;
+    padding: 40px;
+    align-items: start;
 
-    .contact-container{
-        margin-top: 0;
-        padding: 20px;
-        display: flex;
-    }
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+    
+}
 
-        .contact-container h1 {
-            font-family: 'marykate';
-            text-align: center;
-            font-size: 80px;
+.contact-info {
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 100%;
+}
 
-            color: #ff6ca9;
-        }
+.contact-header h1 {
+    font-family: 'marykate';
+    text-align: left;
+    font-size: 160px;
+    color: #ff6ca9;
+    margin-top: 0;
+    padding: 18px;
+}
 
-    .contact-form {
-        background-color: #cadf8f;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-    }
+.contact-header p {
+    font-family: 'seconda';
+    font-size: 30px;
+    width: 40ch;
+    color: #a0517d;
+    padding: 18px;
+    margin-top: -100px;
+}
 
-    #contact img {
-        width: 500px;
-    }
+.contact-form {
+    background-color: #cadf8f;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border-radius: 25px;
+    gap: 10px;
+    border: #85935c 4px solid;
+}
 
+.contact-form label {
+    font-family: 'seconda';
+    color: #444;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 12px 15px;
+    border: 2px solid #85935c;
+    border-radius: 15px;
+    font-size: 16px;
+    font-family: 'seconda';
+    background-color: #fff;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:hover, .contact-form textarea:hover {
+    outline: none;
+    border-color: #ff6ca9;
+}
+
+.contact-form button {
+    margin-top: 10px;
+    padding: 12px 25px;
+    color: #fff;
+    font-family: 'marykate';
+    font-size: 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #ff90be;
+    box-shadow: 0 4px 0 #ff6ca9;
+}
+
+.contact-form button:hover {
+    transform: translateY(-4px);
+    background-color: #fff7ad;
+    box-shadow: 0 4px 0 #f1e7b4;
+    color: #a0517d;
+}
+
+#contactimg {
+    grid-area: img;
+    padding-top: 30px;
+    padding-right: 80px;
+    padding-left: 120px;
+}
+
+#contactmain img {
+    width: 300px;
+}
 
 /* popup msg */
 

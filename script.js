@@ -58,7 +58,7 @@ clicksound.volume = 0.1;
 cuteshine.volume = 0.1;
 magicshine.volume = 0.1;
 notif.volume = 0.1;
-smallwink.volume = 0.15;
+smallwink.volume = 0.2;
 twinkle.volume = 0.1;
 
   if (hasVisited) {
