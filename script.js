@@ -245,4 +245,9 @@ function closePopup() {
 }
 
 
-
+// FADE IN LOAD
+  window.addEventListener("load", function () {
+    document.querySelectorAll(".fade-on-load").forEach((el) => {
+      el.classList.add("show");
+    });
+  });

@@ -967,3 +967,17 @@
 
 /* CURSOR */
 /* Start https://www.cursors-4u.com */ * {cursor: url(https://ani.cursors-4u.net/symbols/sym-8/sym759.ani), url(https://ani.cursors-4u.net/symbols/sym-8/sym759.png), auto !important;} /* End https://www.cursors-4u.com */
+
+
+/* FADE IN ANIMS */
+
+.fade-on-load {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-on-load.show {
+    opacity: 1;
+    transform: translateY(0);
+}
